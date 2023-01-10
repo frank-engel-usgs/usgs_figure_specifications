@@ -14,17 +14,18 @@ print('loading fonts from..."{}"'.format(pth))
 font_files = mplfm.findSystemFonts(fontpaths=pth)
 
 # create font list
-font_list = mplfm.createFontList(font_files, fontext='otf')
+# font_list = mplfm.get_font_names()
 
-# add Oblique to oblique (italic) fonts
-for font in font_list:
-    if font.style == 'oblique':
-        font.name += ' Oblique'
-
-# write summary of available fonts
-print('\navailable fonts:')
-for idx, font in enumerate(font_list):
-    print('  {} - {}'.format(idx+1, font))
+# # add Oblique to oblique (italic) fonts
+# for font in font_list:
+#     if font.style == 'oblique':
+#         font.name += ' Oblique'
+#
+# # write summary of available fonts
+# print('\navailable fonts:')
+# for idx, font in enumerate(font_list):
+#     print('  {} - {}'.format(idx+1, font))
 
 # add files to matplotlib
-mplfm.fontManager.ttflist.extend(font_list)
+# mplfm.fontManager.ttflist.extend(font_list)
+
